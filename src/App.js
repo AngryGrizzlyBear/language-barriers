@@ -1,10 +1,20 @@
 import React from 'react';
-import InputList from './Components/InputList'
+import './index.css'
 
-function App() {
+const App = () => {
   return (
-   <InputList /> 
-    );
+    <div className="container">
+      <h1>Language Barriers</h1>
+      <div className="flex-row">
+        <div className="flex-large">
+          <h2>Add Word</h2>
+        </div>
+        <div className="flex-large">
+          <h2>Translation</h2>
+        </div>
+      </div>
+    </div>
+    )
 }
 
 export default App;
