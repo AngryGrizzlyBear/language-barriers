@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css'
+import UserTable from './Components/UserTable'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         </div>
         <div className="flex-large">
           <h2>Translation</h2>
+          <UserTable />
         </div>
       </div>
     </div>
