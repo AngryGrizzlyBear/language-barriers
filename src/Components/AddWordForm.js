@@ -9,16 +9,17 @@ const AddUserForm = props => {
 
     setWord({ ...word, [name]: value });
   };
-  return (
-    <form
-      onSubmit={event => {
-        event.preventDefault();
-        if (!word.word || !word.translation) return;
 
-        props.addWord(word);
-        setWord(initialFormState);
-      }}
-    >
+  const submitWord = event => {
+    event.preventDefault();
+    if (!word.word || !word.translation) return;
+
+    props.addWord(word);
+    setWord(initialFormState);
+  };
+
+  return (
+    <form onSubmit={event => submitWord(event)}>
       <label>Word</label>
       <input
         type="text"
