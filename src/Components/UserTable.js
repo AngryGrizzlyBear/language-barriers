@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserTable = () => (
+const UserTable = props => (
   <table>
     <thead>
       <tr>
@@ -10,16 +10,24 @@ const UserTable = () => (
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Word Data</td>
-        <td>Translation Data</td>
-        <td>
-            <button className="button muted-button">Edit</button>
-            <button className="button muted-button">Delete</button>
-        </td>
-      </tr>
+      {props.words.length > 0 ? (
+        props.words.map(word => (
+          <tr key={word.id}>
+            <td>{word.word}</td>
+            <td>{word.translation}</td>
+            <td>
+              <button className="button muted-button">Edit</button>
+              <button className="button muted-button">Delete</button>
+            </td>
+          </tr>
+        ))
+      ) : (
+        <tr>
+          <td colSpan={3}>No words</td>
+        </tr>
+      )}
     </tbody>
   </table>
 );
 
-export default UserTable
+export default UserTable;
