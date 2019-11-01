@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const AddUserForm = props => {
-  const initialFormState = { id: null, word: "", translation: "" };
+  const initialFormState = { word: "", translation: "" };
   const [word, setWord] = useState(initialFormState);
 
   const handleInputChange = event => {
