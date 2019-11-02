@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 import UserTable from "./Components/UserTable";
-import AddWordForm from "./Components/AddWordForm"
+import AddWordForm from "./Components/AddWordForm";
 
 const App = () => {
   const wordData = [
@@ -13,7 +13,7 @@ const App = () => {
   const [words, setWords] = useState(wordData);
 
   const addWord = word => {
-    word.id = word.length + 1;
+    word.id = words.length + 1;
     setWords([...words, word]);
   };
 
