@@ -17,7 +17,12 @@ const UserTable = props => (
             <td>{word.translation}</td>
             <td>
               <button className="button muted-button">Edit</button>
-              <button className="button muted-button">Delete</button>
+              <button
+                onClick={() => props.deleteWord(word.id)}
+                className="button muted-button"
+              >
+                Delete
+              </button>
             </td>
           </tr>
         ))
