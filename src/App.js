@@ -17,6 +17,10 @@ const App = () => {
     setWords([...words, word]);
   };
 
+  const deleteWord = id => {
+    setWords(words.filter(word => word.id !== id));
+  };
+
   return (
     <div className="container">
       <h1>Language Barriers</h1>
@@ -27,7 +31,7 @@ const App = () => {
         </div>
         <div className="flex-large">
           <h2>Translation</h2>
-          <UserTable words={words} />
+          <UserTable words={words} deleteWord={deleteWord} />
         </div>
       </div>
     </div>
