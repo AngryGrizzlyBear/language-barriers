@@ -3,8 +3,8 @@ import "./index.css";
 import UserTable from "./Components/UserTable";
 import AddWordForm from "./Components/AddWordForm";
 
-const postData = async () => {
-  const data = { word: "xyz", translation: "abc", id: "1234" };
+const postData = async (word, translation, id) => {
+  const data = { word, translation, id };
   const json = JSON.stringify(data);
 
   const response = await fetch("http://localhost:5999", {
@@ -22,7 +22,7 @@ const postData = async () => {
 };
 
 const App = () => {
-  postData();
+  postData("hi", "Evan", "1234");
   const wordData = [
     { id: 1, word: "はい", translation: "yes" },
     { id: 2, word: "わたし", translation: "I" },
