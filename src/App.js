@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import UserTable from "./Components/UserTable";
 import AddWordForm from "./Components/AddWordForm";
+import PostData from "./Components/PostData"
 
 const postData = async (word, translation, id) => {
   const data = { word, translation, id };
@@ -22,7 +23,7 @@ const postData = async (word, translation, id) => {
 };
 
 const App = () => {
-  postData("hi", "Evan", "1234");
+  PostData("hi", "Evan", "1234");
   const wordData = [
     { id: 1, word: "はい", translation: "yes" },
     { id: 2, word: "わたし", translation: "I" },
