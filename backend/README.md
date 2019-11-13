@@ -3,8 +3,9 @@
 ## Install
 `yarn global add node`
 
-`yarn install`
+`yarn add`
 
+`yarn add cors`
 ## Use
 `node server.js`
 
