@@ -2,28 +2,10 @@ import React, { useState } from "react";
 import "./index.css";
 import UserTable from "./Components/UserTable";
 import AddWordForm from "./Components/AddWordForm";
-import PostData from "./Components/PostData"
-
-const postData = async (word, translation, id) => {
-  const data = { word, translation, id };
-  const json = JSON.stringify(data);
-
-  const response = await fetch("http://localhost:5999", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    body: json
-  });
-
-  const content = await response.json();
-
-  console.log(content);
-};
+import postData from "./api";
 
 const App = () => {
-  PostData("hi", "Evan", "1234");
+  postData("hi", "Evan", "1234");
   const wordData = [
     { id: 1, word: "はい", translation: "yes" },
     { id: 2, word: "わたし", translation: "I" },
